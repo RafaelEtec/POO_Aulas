@@ -28,7 +28,7 @@ public class X {
     }
     
     public void mostrar() {
-        System.out.println("  Atributo A: " + getAtribA());
-        System.out.println("  Atributo B: " + getAtribB() + "\n");
+        System.out.println("  A: " + getAtribA());
+        System.out.println("  B: " + getAtribB() + "\n");
     }
 }
