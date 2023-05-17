@@ -39,6 +39,37 @@ public class Arvore {
         }
     }
     
+    public boolean pesquisar(Elemento e, int n) {
+        if (e != null) {
+            if (n == e.getN()) {
+                System.out.print(e.getN() + "\t");
+                return true;
+            } else if (n > e.getN()) {
+                System.out.print(e.getN() + "\t");
+                return pesquisar(e.getDir(), n);
+            } else {
+                System.out.print(e.getN() + "\t");
+                return pesquisar(e.getEsq(), n);
+            }
+        }
+        System.out.println("\n| Não foi possível encontrar o valor: " + n);
+        return false;
+    }
+    
+    public int maiorValor(Elemento e) {
+        if (e.getDir() != null) {
+            return maiorValor(e.getDir());
+        }
+        return e.getN();
+    }
+    
+    public int menorValor(Elemento e) {
+        if (e.getEsq() != null) {
+            return maiorValor(e.getEsq());
+        }
+        return e.getN();
+    }
+    
     /**
      * 1) Percorrer subárvore esquerda
      * 2) Visitar nó raiz
