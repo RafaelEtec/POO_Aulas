@@ -3,6 +3,7 @@ package Aula_19_05_2023;
 /**
  *
  * @author Rafael.fgoulart1
+ *         Pedro Henrique Fogaça
  */
 public class Caminhao extends Veiculo {
     private int eixos;
